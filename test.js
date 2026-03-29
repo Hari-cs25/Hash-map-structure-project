@@ -1,5 +1,5 @@
 //import {HashMap} from './sc.js';
-const HashMap = require('./sc.js');
+const HashMap = require('./script.js');
 const test =  HashMap();
 
 test.set('apple', 'red')
