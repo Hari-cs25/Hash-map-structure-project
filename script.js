@@ -3,7 +3,6 @@ const HashMap = ()=>{
     let buckets = new Array(16); 
     let loadFactor = 0; 
     let noKeys=0;
-    let noKeyVals =0;
 
     function hash(key){ 
         let hashCode = 0; 
@@ -16,7 +15,6 @@ const HashMap = ()=>{
          } 
 
          function set(key, value){ 
-
             let hashCode = hash(key);
             let index = hashCode % capacity; 
             let match = false;
@@ -38,6 +36,7 @@ const HashMap = ()=>{
                                 break;
                             }
                           } 
+
                           if(match === false){
                              buckets[index].push([key, value]); 
                              ++noKeys;
@@ -181,3 +180,4 @@ const HashMap = ()=>{
  };
 
 module.exports = HashMap;
+
